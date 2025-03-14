@@ -2,4 +2,5 @@
 
 Jennifer rodriguez puertas
 
-#integrantes: 
+#Integrantes: 
+Daniela Diaz | DaniDiaz15
