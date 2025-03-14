@@ -3,13 +3,23 @@
 ## Tabla de contenido
 
 1. [Convenciones de Nombrado Mixtas](#1-convenciones-de-nombrado-mixtas)
-2. [Documentación Bilingüe](#2-documentación-bilingüe)
-3. [Ejemplos Complejos Híbridos](#3-ejemplos-complejos-híbridos)
-4. [Estándares de Calidad](#4-estándares-de-calidad)
-5. [Glosario Bilingüe](#5-glosario-bilingüe)
-6. [Justificación de la Estrategia](#6-justificación-de-la-estrategia)
-7. [Control de Versiones con Git](#7-control-de-versiones-con-git)
-8. [Checklist de Control de Versiones](#8-checklist-de-control-de-versiones)
+    <br> 1.1. [Principios Básicos](#11-principios-básicos)
+    <br> 1.2. [Reglas Explícitas](#12-reglas-explícitas)
+    <br> 1.3. [Comentarios en Código](#13-comentarios-en-código)
+    <br> 1.4. [Ejemplos de Código](#15-ejemplos-de-código)
+    <br> 1.5. [Glosario Bilingüe](#16-glosario-bilingüe)
+    <br> 1.6. [Justificación de la Estrategia](#17-justificación-de-la-estrategia)
+2. [Control de Versiones con Git](#2-control-de-versiones-con-git)
+    <br> 2.1 [Estructura de Commits (Conventional Commits)](#21-estructura-de-commits-conventional-commits)
+    <br> 2.2 [Estrategia de Branching](#22-estrategia-de-branching)
+    <br> 2.3 [Relación Issues-Commit](#23-relación-issues-commit)
+    <br> 2.4 [Lineamientos para Pull Requests](#24-lineamientos-para-pull-requests)
+3. [Estructura de Proyecto Recomendada](#3-estructura-de-proyecto-recomendada)
+    <br> 3.1 [Explicación por Sección](#31-explicación-por-sección)
+    <br> 3.2 [Notas Clave para Estudiantes](#32-notas-clave-para-estudiantes)
+    <br> 3.3 [Reglas para Nombrado de Archivos](#33-reglas-para-nombrado-de-archivos)   
+
+---
 
 ## 1. Convenciones de Nombrado Mixtas
 
@@ -63,11 +73,11 @@ COMMENT ON COLUMN water_management_systems.nombre_vereda IS
     'Nombre oficial según resolución 1234 de 2020 de la Alcaldía';
 ```
 
-### 1.5 Ejemplos de código
+### 1.4 Ejemplos de código
 
 A continuación, se presentan ejemplos de código que combinan términos técnicos en inglés con dominio en español. Estos ejemplos ilustran cómo se pueden aplicar las convenciones de codificación en diferentes contextos.
 
-#### 1.5.1 Ejemplo Consulta con PostGIS
+#### 1.4.1 Ejemplo Consulta con PostGIS
 
 El siguiente ejemplo muestra una consulta espacial que calcula el área de los sistemas de acueducto veredal en Bogotá. La consulta utiliza funciones PostGIS en inglés y nombres de columnas en español.
 
@@ -95,7 +105,7 @@ FROM upz_contaminacion
 ORDER BY promedio_pm25 DESC;
 ```
 
-#### 1.5.2 Ejemplo Función con Validación
+#### 1.4.2 Ejemplo Función con Validación
 
 El siguiente ejemplo muestra una función PL/pgSQL que valida rutas de transporte público en Bogotá. La función combina términos técnicos en inglés con mensajes de error en español para comunicar claramente las restricciones.
 
@@ -140,7 +150,7 @@ END;
 $$ LANGUAGE plpgsql;
 ```
 
-#### 1.5.3 Ejemplo Reglas de Validación
+#### 1.4.3 Ejemplo Reglas de Validación
 
 El siguiente ejemplo muestra cómo se pueden definir reglas de validación en una tabla de bases de datos. Las reglas de validación utilizan términos técnicos en inglés para las restricciones y mensajes en español para la comunicación con los usuarios.
 
@@ -157,7 +167,7 @@ COMMENT ON INDEX idx_rutas_transporte_geom IS
     'Índice espacial para optimizar consultas de rutas';
 ```
 
-### 1.6 Glosario Bilingüe
+### 1.5 Glosario Bilingüe
 
 El siguiente glosario bilingüe proporciona una lista de términos técnicos en inglés y sus equivalentes en español. Estos términos se pueden utilizar en la documentación y el código para mantener la coherencia y facilitar la comprensión de los desarrolladores.
 
@@ -173,7 +183,7 @@ El siguiente glosario bilingüe proporciona una lista de términos técnicos en 
 | `join`                       | unir/unión                                |
 | `view`                       | vista                               |
 
-### 1.7 Justificación de la Estrategia
+### 1.6 Justificación de la Estrategia
 
 La estrategia de codificación mixta se basa en la necesidad de combinar estándares internacionales con requisitos locales específicos. Algunas de las razones clave para esta estrategia son:
 
@@ -278,3 +288,123 @@ Los Pull Requests deben incluir una descripción detallada de los cambios realiz
    - ✅ Al menos 2 aprobaciones de compañeros
    - ✅ Todos los tests en GitHub Actions pasan
    - ✅ Documentación actualizada
+
+---
+
+## 3. Estructura de Proyecto Recomendada
+
+La estructura de un proyecto de bases de datos urbanas en Bogotá debe seguir una organización clara y coherente para facilitar la colaboración y el mantenimiento. La siguiente estructura de proyecto se basa en las mejores prácticas de la industria.
+
+```bash
+Proyecto_1_Calidad_Aire/            # Nombre del proyecto (ej: 1_Calidad_Aire)
+│
+├── data/
+│   ├── raw/                        # Datos originales (CSV, GeoJSON, Shapefiles)
+│   │   ├── estaciones_ideam.csv    # Datos crudos de 14 estaciones (ID, nombre, lat, lon)
+│   │   └── hospitalizaciones.json  # Registros de salud 2023-2024
+│   │
+│   └── processed/                  # Datos transformados (listos para carga)
+│       ├── estaciones_normalizadas.csv  # Sin duplicados, coordenadas en WGS84
+│       └── aire_hospital.sql        # Datos unificados para carga masiva
+│
+├── database/
+│   ├── ddl/                        # Definición de estructura
+│   │   ├── 01_tables.sql           # CREATE TABLE estaciones, mediciones...
+│   │   ├── 02_indexes.sql          # Índices y optimizaciones -> CREATE INDEX idx_pm25 ON mediciones...
+│   │   └── 03_security.sql         # RLS y pgcrypto -> ALTER TABLE... ENABLE ROW LEVEL SECURITY
+│   │
+│   ├── dml/                        # Datos iniciales
+│   │   └── initial_data.sql        # Inserciones básicas
+│   │
+│   ├── functions/                  # Lógica de negocio
+│   │   ├── calcular_promedio.sql
+│   │   ├── generar_alerta.sql
+│   │   └── calcular_ica.sql        # Función que calcula Índice de Calidad del Aire
+│   │
+│   └── triggers/                   # Automatizaciones
+│       ├── alerta_contaminacion.sql
+│       └── alerta_pm25.sql         # Trigger que inserta en tabla alertas
+│
+├── etl/                            # Scripts de transformación
+│   ├── data_cleaning.py           # Limpieza con Pandas, Ej: Elimina registros con PM2.5 < 0
+│   ├── load_to_postgres.py        # Carga a la BD, Ej: Usa psycopg2 para cargar CSV a PostgreSQL
+│   └── requirements.txt           # Dependencias Python (si aplica): pandas==2.0.3, sqlalchemy==2.0.0
+│
+├── docs/                           # Documentación
+│   ├── er_diagram.md              # Modelo Entidad-Relación mermaid
+│   ├── decisions.md               # Justificación técnica, Ej: # "¿Por qué elegimos PostGIS sobre MongoDB?
+│   ├── legal/                     # Documentos legales
+│   │   ├── privacy_policy.md      # Política de privacidad
+│   │   └── consent.md             # Consentimiento de datos
+│   │
+│   └── ia_audit/                  # Uso de IA
+│       ├── prompts_usados.md      # Historial de prompts, Ej: "Genera función SQL para promedio semanal PM2.5"
+│       └── codigo_modificado/     # Modificaciones al código generado por ChatGPT
+│
+├── tests/                         # Pruebas básicas
+│   ├── test_queries.sql           # SELECT * FROM alertas WHERE...
+│   └── test_triggers.sql          # Simula inserción que debe activar alerta
+├── README.md                      # Instrucciones generales
+```
+
+### 3.1. **Explicación por Sección**  
+1. **`data/`**  
+   - **Raw:** Datos originales *inalterados* (preservar fuentes).  
+     *Ej: CSV descargado del [Sistema de Monitoreo de Bogotá](https://datosabiertos.bogota.gov.co/)*.  
+   - **Processed:** Datos limpios y estructurados para la BD.  
+     *Ej: CSV con coordenadas convertidas a WGS84 usando Python*.
+
+2. **`database/`**  
+   - **DDL:** Scripts SQL ordenados secuencialmente:  
+     ```sql
+     -- 01_tables.sql
+     CREATE TABLE estaciones (
+         id SERIAL PRIMARY KEY,
+         nombre VARCHAR(100),
+         ubicacion GEOGRAPHY(POINT)
+     );
+     ```
+   - **Functions/Triggers:** Lógica reusable y automatizaciones.  
+
+3. **`etl/`**  
+   - Scripts en Python para ETL (Extraer, Transformar, Cargar).  
+     *Ej: `data_cleaning.py` filtra registros inválidos de PM2.5*.
+
+4. **`docs/`**  
+   - **IA Audit:** Registro ético del uso de IA.  
+     *Ej: Captura de prompt usado en ChatGPT y cómo se mejoró su solución*.
+
+5. **`tests/`**  
+   - Validaciones básicas:  
+     ```sql
+     -- test_triggers.sql
+     INSERT INTO mediciones (pm25, estacion_id) VALUES (35, 1);  -- Debe generar alerta
+     ```
+
+### 3.2. **Notas Clave para Estudiantes**  
+1. **Versionado Incremental:**  
+   - Numerar scripts SQL (`01_`, `02_`) para controlar orden de ejecución.  
+2. **Git Diario:**  
+   - Hacer commit al final de cada sesión de trabajo con mensajes descriptivos:  
+     *"feat: add trigger for weekly averages calculation"*.  
+3. **Testing Básico:**  
+   - Antes de hacer merge a `main`, ejecutar `test_queries.sql` para verificar datos.  
+4. **Consideraciones Legales:**  
+   - Si usan datos reales de pacientes, agregar anonimización en `data_cleaning.py`.  
+
+### 3.3. **Reglas para Nombrado de Archivos**
+
+Los archivos en el proyecto deben seguir una convención de nombres clara y coherente para facilitar la identificación y el mantenimiento. Se recomienda utilizar un formato descriptivo y consistente para todos los archivos.
+
+1. **SQL**:  
+   - `[orden]_[tipo]_[descripción].sql`  
+   - Ej: `02_dml_insert_hospitalizaciones.sql`  
+
+2. **Python**:  
+   - `[proceso]_[fuente]_[destino].py`  
+   - Ej: `transform_calidad_aire_postgres.py`  
+
+3. **Geodatos**:  
+   - `[tipo]_[localidad]_[año].[ext]`  
+   - Ej: `poligonos_ciudad_bolivar_2024.geojson`
+
