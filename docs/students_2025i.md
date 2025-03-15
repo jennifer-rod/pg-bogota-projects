@@ -12,6 +12,8 @@ Angie Delgado
 
 Helen Calderon
 
+Michael Gomez
+
 Zharik Echeverria
 
 Angie Vanegas
