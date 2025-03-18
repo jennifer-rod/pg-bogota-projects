@@ -49,6 +49,7 @@ David Stiven Silva Velandia
 Nicolas Sanabria c:
 
 Cristian Castelblanco
+Daniela Diaz 
 
 Jennifer Rodríguez P.
 
