@@ -4,6 +4,8 @@
 
 ## Estudiantes Grupo 2B
 
+Julian Sanchez
+
 Juan Mancera
 
 Juan David Hernandez Rivera
