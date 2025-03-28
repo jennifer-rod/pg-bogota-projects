@@ -1,0 +1,7 @@
+Datos del consumo promedio de agua potable por suscriptor facturado en Bogotá, Soacha y Gachancipá - acumulado.;
+;
+Mes;Es el mes del año donde se presenta el consumo de agua potable.
+Consumo promedio de agua potable (m3-mes);Consumo de agua potable expreado en metros cúbicos mes para las áreas de servicio de Bogotá, Soacha y Gachancipá. Incluye el ciclo i  (predios en proceso de legalización). En Bogotá no tiene en cuenta la localidad de Sumapaz. 
+Fuente;Agua facturada: Consulta BW ZZUCSAC52_Q5001 Facturación consumos y cargos fijos por Población
+;Suscriptores Facturados: Consulta BW ZUCSA_C71_Q5001 Cantidad Ctas Contrato Facturadas por mes y Población
+Cálculo;EAAB-Dirección de Planeación y Control de Resultados Corporativos
