@@ -13,6 +13,8 @@ A continuación se presenta una tabla estructurada con información sobre fuente
 | Bogotá, Colombia | Empresa de Acueducto y Alcantarillado de Bogotá | https://datosabiertos.bogota.gov.co/dataset/dato-abierto-irca-julio-diciembre-2023 | Índice de Riesgo de la Calidad del Agua para Consumo Humano | Recursos hídricos, Salud pública | Semestral | CSV |
 | Bogotá, Colombia | Personería de Bogotá | https://www.personeriabogota.gov.co/sala-de-prensa/notas-de-prensa/item/1288-preocupa-tasa-constante-de-descenso-de-niveles-de-los-embalses-del-sistema-chingaza | Monitoreo satelital de niveles de los embalses del sistema Chingaza (Chuza y San Rafael) | Recursos hídricos, Monitoreo | Mensual | No especificado |
 | Bogotá, Colombia | Secretaría Distrital de Ambiente | https://datosabiertos.bogota.gov.co/ | Información sobre aguas subterráneas y 521 pozos de agua subterránea en Bogotá | Recursos hídricos, Geología | No especificada | No especificado |
+| Medellín, Colombia | EPM - Gobierno Digital | https://www.datos.gov.co/ | Series históricas de consumo de agua por sectores, indicadores de continuidad del servicio y calidad del recurso hídrico | Estadísticas hídricas | Mensual | CSV, XLSX |
+| Medellín, Colombia | Empresas Públicas de Medellín (EPM) | https://www.epm.com.co/institucional/datos-abiertos-epm/ | Interrupciones programadas del servicio de acueducto con detalles de ubicación, duración y causas | Gestión de servicios hídricos | Tiempo real | API REST, CSV |
 
 ## Detalles de las Fuentes de Datos
 
