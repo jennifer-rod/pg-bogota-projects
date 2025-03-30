@@ -35,6 +35,10 @@ A continuación se presenta una tabla estructurada con información sobre fuente
 | Colombia | IDEAM | [http://www.ideam.gov.co/web/agua/estudio-nacional-del-agua](http://www.ideam.gov.co/web/agua/estudio-nacional-del-agua) | Oferta, demanda, calidad y riesgo hidrológico del agua | Medio Ambiente | Histórico | PDF, Informes Técnicos |
 | Colombia | Datos Abiertos Colombia | [https://www.datos.gov.co](https://www.datos.gov.co) | Diversos datos sectoriales incluyendo medio ambiente y agua | Medio Ambiente | Variable | CSV, JSON, Shapefiles |
 | Medellín | EPM (No disponible en los resultados de búsqueda, pero se puede consultar) | [https://www.epm.com.co/institucional/datos-abiertos-epm/](https://www.epm.com.co/institucional/datos-abiertos-epm/) | Interrupciones planificadas en el suministro de agua | Medio Ambiente | Histórico | CSV, JSON |
+|Medellín	| Datos Abiertos Colombia|	https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Acueductos-Medellin/2g8t-8mac	| Información sobre acueductos |	Medio Ambiente |	Histórico |	CSV|
+|Medellín |	EPM |	https://www.epm.com.co/clientesyusuarios/geoportal/ |	Mapas geográficos del área de prestación del servicio de acueducto y alcantarillado |	Medio Ambiente |	Histórico |	Mapas|
+|Medellín |	EPM (Empresas Públicas de Medellín)	| https://www.epm.com.co/clientesyusuarios/aguas/ |	Información sobre el servicio de agua potable, incluyendo suministro y tratamiento de aguas residuales |	Medio Ambiente |	Mensual/Histórico |	Informes |
+|Medellín |	EPM	| https://www.epm.com.co/clientesyusuarios/aguas/indicadores-de-calidad/ |	Reportes de calidad del agua potable en la red de distribución |	Medio Ambiente |	Mensual/Histórico |	Informes |
 
 ## Detalles de las Fuentes de Datos
 
