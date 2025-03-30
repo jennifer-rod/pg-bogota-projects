@@ -35,10 +35,21 @@ A continuación se presenta una tabla estructurada con información sobre fuente
 | Colombia | IDEAM | [http://www.ideam.gov.co/web/agua/estudio-nacional-del-agua](http://www.ideam.gov.co/web/agua/estudio-nacional-del-agua) | Oferta, demanda, calidad y riesgo hidrológico del agua | Medio Ambiente | Histórico | PDF, Informes Técnicos |
 | Colombia | Datos Abiertos Colombia | [https://www.datos.gov.co](https://www.datos.gov.co) | Diversos datos sectoriales incluyendo medio ambiente y agua | Medio Ambiente | Variable | CSV, JSON, Shapefiles |
 | Medellín | EPM (No disponible en los resultados de búsqueda, pero se puede consultar) | [https://www.epm.com.co/institucional/datos-abiertos-epm/](https://www.epm.com.co/institucional/datos-abiertos-epm/) | Interrupciones planificadas en el suministro de agua | Medio Ambiente | Histórico | CSV, JSON |
+
 |Medellín	| Datos Abiertos Colombia|	https://www.datos.gov.co/Hacienda-y-Cr-dito-P-blico/Acueductos-Medellin/2g8t-8mac	| Información sobre acueductos |	Medio Ambiente |	Histórico |	CSV|
 |Medellín |	EPM |	https://www.epm.com.co/clientesyusuarios/geoportal/ |	Mapas geográficos del área de prestación del servicio de acueducto y alcantarillado |	Medio Ambiente |	Histórico |	Mapas|
 |Medellín |	EPM (Empresas Públicas de Medellín)	| https://www.epm.com.co/clientesyusuarios/aguas/ |	Información sobre el servicio de agua potable, incluyendo suministro y tratamiento de aguas residuales |	Medio Ambiente |	Mensual/Histórico |	Informes |
 |Medellín |	EPM	| https://www.epm.com.co/clientesyusuarios/aguas/indicadores-de-calidad/ |	Reportes de calidad del agua potable en la red de distribución |	Medio Ambiente |	Mensual/Histórico |	Informes |
+
+________________________________________________________________________________________________________________________________________________________________________________________
+| Ciudad/Región       | Fuente de Datos                                                      | URL de Acceso                                                                                                                                                      | Tipo de Datos                                                                      | Categoría                           | Frecuencia de Actualización | Formato             |
+| ------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ----------------------------------- | --------------------------- | ------------------- |
+| Cali, Colombia      | DAGMA - Departamento Administrativo de Gestión del Medio Ambiente    | [https://www.cali.gov.co/dagma](https://www.cali.gov.co/dagma)                                                                                                     | Calidad del agua, consumo por zona y fuentes de abastecimiento                     | Medio ambiente y recursos hídricos  | Trimestral                  | CSV, Shapefile      |
+| Antioquia, Colombia | Corantioquia - Corporación Autónoma Regional                         | [https://www.corantioquia.gov.co/datos-abiertos](https://www.corantioquia.gov.co/datos-abiertos)                                                                   | Monitoreo de cuencas, caudales de ríos y calidad del agua                          | Medio ambiente                      | Históricos y mensuales      | CSV, API REST       |
+| Manizales, Colombia | Aguas de Manizales S.A. E.S.P                                        | [https://www.aguasdemanizales.com.co](https://www.aguasdemanizales.com.co)                                                                                         | Consumo de agua por sectores, calidad del agua y eventos de escasez                | Infraestructura y abastecimiento    | Mensual                     | CSV, PDF            |
+
+
+
 
 ## Detalles de las Fuentes de Datos
 
@@ -82,7 +93,9 @@ Citations:
 [20] http://www.ideca.gov.co/recursos/mapas/red-matriz-sistema-acueducto
 [21] https://www.acueducto.com.co/wps/vanityurl/datos_abiertos
 [22] https://www.personeriabogota.gov.co/sala-de-prensa/notas-de-prensa/item/1288-preocupa-tasa-constante-de-descenso-de-niv
-
+[23] https://www.cali.gov.co/dagma
+[24] https://www.corantioquia.gov.co/datos-abiertos
+[25] https://www.aguasdemanizales.com.co/
 
 
 
